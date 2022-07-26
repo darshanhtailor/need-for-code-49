@@ -1,0 +1,122 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <input type="email" name="email" required>
+        <input type="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    {{#if messages.error}}
+    <div style="text-align:center ;color:red;">{{messages.error}} </div>
+    {{/if}}
+</body>
+
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #header {
+        text-align: center;
+        margin: 10px;
+    }
+
+    /* index page styling */
+    .box {
+        border: 2px solid;
+        width: 400px;
+        margin: 100px auto;
+        height: 400px;
+        background: white;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+
+    .box h1 {
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    .box form .labels {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    .box form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box form input {
+        width: 80%;
+        height: 20px;
+        padding: 5px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .box form button {
+        width: 300px;
+        padding: 7px 8px;
+        border-radius: 20px;
+        background: black;
+        color: white;
+        font-size: 18px;
+        transition: 0.5s ease;
+    }
+
+    .box form button:hover {
+        cursor: pointer;
+        color: black;
+        background: white;
+    }
+
+    body {
+        background: black;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>College-Space</h1>
+        <form action="/login" method="post">
+            <labe class="labels">Email</labe>
+            <input type="email" name="email" placeholder="Email" required>
+            <labe class="labels">Password</labe>
+            <input type="password" name="password" placeholder="Password" required>
+            <button>Login</button>
+            {{#if messages.error}}
+    <div style="text-align:center ;color:red;">{{messages.error}} </div>
+    {{/if}}
+        </form>
+    </div>
+
+</body>
